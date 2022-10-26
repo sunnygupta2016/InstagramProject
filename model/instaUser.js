@@ -1,0 +1,79 @@
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+const instaUserSchema = new Schema({
+    account:{
+        type:String,default:""
+    },
+    biography:{
+        type:String,default:""
+    },
+    business_address_json:{
+        type:Object,default:{}
+    },
+    business_category_name:{
+        type:String,default:""
+    },
+    business_email:{
+        type:String,default:""
+    },
+    external_url:{
+        type:String,default:""
+    },
+    fbid:{
+        type:String,default:""
+    },
+    followers:{
+        type:Number,default:0
+    },
+    following:{
+        type:Number,default:0
+    },
+    highlights:{
+        type:Array,default:[]
+    },
+    id:{
+        type:String,default:""
+    },
+    is_business_account:{
+        type:Boolean,default:false
+    },
+    is_professional_account:{
+        type:Boolean,default:false
+    },
+    is_verified:{
+        type:Boolean,default:false 
+    },
+    posts:{
+        type:Array,default:[]
+    },
+    posts_count:{
+        type:Number,default:0
+    },
+    profile_image_link:{
+        type:String,default:"" 
+    },
+    profile_name:{
+        type:String,default:"" 
+    },
+    timestamp:{
+        type:String,default:"" 
+    },
+    highlights_count:{
+        type:Number,default:0 
+    },
+    country_code:{
+        type:String,default:"" 
+    },
+    region:{
+        type:String,default:""
+    },
+    avg_engagement:{
+        type:Number ,default:0
+    },
+    post_hashtags:{
+        type:Array,default:[]
+    }
+})
+const instaUser = mongoose.model('instaUser', instaUserSchema);
+module.exports = instaUser;
